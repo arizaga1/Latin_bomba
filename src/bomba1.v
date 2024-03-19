@@ -1,7 +1,7 @@
 //`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: UPPuebla
-// Engineer:Juan Antonio Arízaga-Silva 
+// Engineer:Juan Antonio Arizaga-Silva 
 // 
 // Create Date: 24.01.2024 11:57:25
 // Design Name: 
