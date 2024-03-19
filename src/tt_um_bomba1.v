@@ -16,9 +16,11 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+    
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
-
+    bomba1(.ck(uio_in[7]),.rst_i(uio_in[6]),.sensores_i(uio_in[5:3]),.alarma_o(uio_out[1]),.bomba_o(uio_out[0])); 
+    assign uio_oe = 8'b00000011
+    assign uio_out[7:2] = 5'b00000;
+    assign uo_out[7:0] = 8'b00000000;
+    
 endmodule
