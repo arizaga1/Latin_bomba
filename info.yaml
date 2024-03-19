@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "Bomba "      # Project title
-  author:       "Arizaga-Silva"      # Your name
+  author:       "Arizaga Silva"      # Your name
   discord:      "MHMD_2023_AI"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Circuito de control basado en maquina de estados para controla el llenado de un deposito de agua a traves de una bomba"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
