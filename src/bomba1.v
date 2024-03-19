@@ -1,7 +1,7 @@
-`timescale 1ns / 1ps
+//`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: UPPuebla
-// Engineer:Juan Antonio Ar韟aga-Silva 
+// Engineer:Juan Antonio Ar铆zaga-Silva 
 // 
 // Create Date: 24.01.2024 11:57:25
 // Design Name: 
@@ -27,18 +27,18 @@ module bomba1(
     output reg alarma_o,
     output reg bomba_o
     );
-// sensores dos para el dep髎ito superior y uno para la cisterna 
+// sensores dos para el dep贸sito superior y uno para la cisterna 
 
 // registro para los estado
     reg [1:0] state, nextState;
    // reg alarma_r,bomba_r;
-// Definici髇 de par醡etros para los estados
+// Definici贸n de par谩metros para los estados
   parameter espera = 2'b00;
   parameter llenado = 2'b01;
   parameter alarma = 2'b10;
     
 
-// Asignaci髇 as韓crona del siguiente estado
+// Asignaci贸n as铆ncrona del siguiente estado
 always @ (state) begin
     case (state)
     espera:
@@ -72,12 +72,12 @@ always @ (state) begin
     else if (sensores_i == 3'b111) nextState = espera;
     endcase
   end 
-// Asignaci髇 s韓crona: Actualizaci髇 del estado
+// Asignaci贸n s铆ncrona: Actualizaci贸n del estado
 always @ (posedge ck or negedge rst_i) begin
     if (rst_i == 0) state = espera;
     else            state = nextState;    
 end
-// Asignaci髇 de las salidas    
+// Asignaci贸n de las salidas    
 always @ (state) begin
     case (state)
     espera:
