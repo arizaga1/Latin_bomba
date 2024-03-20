@@ -8,13 +8,13 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-Bomba1
+bomba1
 
 
 ## How to test
 
-Bomba1
+bomba1
 
 
 ## External hardware
-Bomba1
+bomba1
