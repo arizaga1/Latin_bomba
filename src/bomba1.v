@@ -92,8 +92,8 @@ always @ (state) begin
     end
     alarma:
     begin
-        alarma_o    =   1'b1;
-        bomba_o     =   1'b0;
+        alarma_o    <=   1'b1;
+        bomba_o     <=   1'b0;
     end
    endcase
    end 
