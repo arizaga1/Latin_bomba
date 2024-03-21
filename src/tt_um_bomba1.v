@@ -18,7 +18,7 @@ module tt_um_bomba1 (
 
     
   // All output pins must be assigned. If not used, assign to 0.
-    bomba1 #(.ck(uio_in[7]),.rst_i(uio_in[6]),.sensores_i(uio_in[5:3]),.alarma_o(uio_out[1]),.bomba_o(uio_out[0])); 
+    bomba1 # (.ck(uio_in[7]),.rst_i(uio_in[6]),.sensores_i(uio_in[5:3]),.alarma_o(uio_out[1]),.bomba_o(uio_out[0])); 
     assign uio_oe = 8'b00000011
     assign uio_out[7:2] = 5'b00000;
     assign uo_out[7:0] = 8'b00000000;
