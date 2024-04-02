@@ -12,13 +12,17 @@ You can also include images in this folder and reference them in the markdown. E
 ![Logo](https://latinpracticecom.files.wordpress.com/2023/06/logo-lp-2-1.png)
 
 Este proyecto  forma parte de la iniciativa LATINPRACTICE_2024
-con el cual se pretende que profesores universitarios y alumnos de nivel medio superior y superior, tengan acceso a herramietnas para el diseño de circuitos integrados.
+con el cual se pretende que profesores universitarios y alumnos de nivel medio superior y superior, tengan acceso a herramientas de software libre para el diseño de circuitos integrados .
 
 Este proyecto es una máquina de estados sencilla que permite controlar el llenado y vaciado automático de un depósito superior de agua alimentado por una bomba conectada a un depósito inferior de agua.
 
 
 ## How it works
-bomba1
+El circuito consta de una máquina de estados tipo Mealy con tres estados (Espera, llenado y Alarma).
+
+Las entradas del circuito corresponden a sensores que detectan la presencia o ausencia de agua. Un sensor para la cisterna (depósito inferior) y dos sensores para el depósito superior. 
+
+EL circuito cuenta con dos salidas, lap rimera para encender y apagar la bomba y la segunda para encender una luz o una alarma que indique qu eno hay agua en el depósito inferior.
 
 
 ## How to test
