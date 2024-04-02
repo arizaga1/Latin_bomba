@@ -9,6 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 
 # LATINPRACTICE_2024
+![Logo](https://latinpracticecom.files.wordpress.com/2023/06/logo-lp-2-1.png)
 
 Este proyecto  forma parte de la iniciativa LATINPRACTICE_2024
 con el cual se pretende que profesores universitarios y alumnos de nivel medio superior y superior, tengan acceso a herramietnas para el diseño de circuitos integrados.
