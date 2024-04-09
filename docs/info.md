@@ -20,9 +20,9 @@ Este proyecto es una máquina de estados sencilla que permite controlar el llena
 ## How it works
 El circuito consta de una máquina de estados tipo Mealy con tres estados (Espera, llenado y Alarma).
 
-Las entradas del circuito corresponden a sensores que detectan la presencia o ausencia de agua. Un sensor para la cisterna (depósito inferior) y dos sensores para el depósito superior. 
+Las entradas del circuito corresponden a sensores que detectan la presencia o ausencia de agua (1 o 0 lógico), es decir son señales digitales. Un sensor para la cisterna (depósito inferior) y dos sensores para el depósito superior. 
 
-EL circuito cuenta con dos salidas, la primera para encender y apagar la bomba y la segunda para encender una luz o una alarma que indique que no hay agua en el depósito inferior.
+EL circuito cuenta con dos salidas digitales, la primera para encender y apagar la bomba y la segunda para encender una luz o una alarma que indique que no hay agua en el depósito inferior.
 
 El proyecto utiliza un modelo de máquina de estados finitos con tres estados para controlar el llenado del depósito superior mediante una bomba. Los tres estados son:
 
@@ -42,9 +42,15 @@ bomba1
 
 
 ## External hardware
-bomba1
+La asignación de entradas y salidas del diseño del control de la bomba a las entradas y salidas del proyecto Latinpractice son como se indica a continuación.
 
+ck:       Conectado a   uio_in[7].
+rst_i:    Conectado a   uio_in[6].
+sensores_i: Conectado a uio_in[5:3].
+alarma_o: Conectado a uio_out[1].
+bomba_o:  Conectado a uio_out[0].
 
+Como puede notarse, el proyecto de la bomba, para hacer más legible el código, indica cuando un puerto es de entrada colocando un _i en el puerto y cuando un puerto es de salida un _o, excepto en el puerto de reloj.
 
 ## Authors
 
