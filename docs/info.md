@@ -38,7 +38,7 @@ Cada estado y transición está definido en el código Verilog proporcionado, lo
 
 ## How to test
 
-bomba1
+TODO
 
 
 ## External hardware
