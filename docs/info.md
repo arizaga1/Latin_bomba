@@ -50,7 +50,7 @@ sensores_i: Conectado a uio_in[5:3].
 alarma_o: Conectado a uio_out[1].
 bomba_o:  Conectado a uio_out[0].
 
-Como puede notarse, el proyecto de la bomba, para hacer más legible el código, indica cuando un puerto es de entrada colocando un _i en el puerto y cuando un puerto es de salida un _o, excepto en el puerto de reloj.
+Como puede notarse, el proyecto de la bomba, para hacer más legible el código, indica cuando un puerto es de entrada colocando un _i al final del nombre del puerto (rst_i) y cuando un puerto es de salida un _o (bomba_o), excepto en el puerto de reloj.
 
 ## Authors
 
