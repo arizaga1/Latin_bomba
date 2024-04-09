@@ -1,8 +1,7 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
 
-# Digital Control State machine   designed for Tiny Tapeout Project  
+# Digital Control State machine designed for Tiny Tapeout Project  
 
-- [Read the documentation for project, in Spanish](docs/info.md)
 
 ## What is Tiny Tapeout?
 
@@ -10,32 +9,57 @@ TinyTapeout is an educational project that aims to make it easier and cheaper th
 
 To learn more and get started, visit https://tinytapeout.com.
 
-## Verilog Projects
 
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Optionally, add a testbench to the `test` folder. See [test/README.md](test/README.md) for more information.
+# LATINPRACTICE_2024
+![Logo](https://latinpracticecom.files.wordpress.com/2023/06/logo-lp-2-1.png)
 
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+Este proyecto  forma parte de la iniciativa LATINPRACTICE_2024
+con el cual se pretende que profesores universitarios y alumnos de nivel medio superior y superior, tengan acceso a herramientas de software libre para el diseño de circuitos integrados .
 
-## Enable GitHub actions to build the results page
+Este proyecto es una máquina de estados sencilla que permite controlar el llenado y vaciado automático de un depósito superior de agua alimentado por una bomba conectada a un depósito inferior de agua.
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
 
-## Resources
+## How it works
+El circuito consta de una máquina de estados tipo Mealy con tres estados (Espera, llenado y Alarma).
 
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-- [Build your design locally](https://docs.google.com/document/d/1aUUZ1jthRpg4QURIIyzlOaPWlmQzr-jBn3wZipVUPt4)
+Las entradas del circuito corresponden a sensores que detectan la presencia o ausencia de agua (1 o 0 lógico), es decir son señales digitales. Un sensor para la cisterna (depósito inferior) y dos sensores para el depósito superior. 
 
-## What next?
+EL circuito cuenta con dos salidas digitales, la primera para encender y apagar la bomba y la segunda para encender una luz o una alarma que indique que no hay agua en el depósito inferior.
 
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@matthewvenn](https://twitter.com/matthewvenn)
+El proyecto utiliza un modelo de máquina de estados finitos con tres estados para controlar el llenado del depósito superior mediante una bomba. Los tres estados son:
+
+1. **Espera (`espera`)**: Este estado indica que el sistema está en espera de alguna acción. En este estado, la bomba está apagada (`bomba_o = 0`) y la alarma está desactivada (`alarma_o = 0`). La transición desde este estado ocurre cuando se detecta que el depósito superior está vacío y que hay agua en el depósito inferior (`sensores_i = 001`) o cuando se detecta que la cisterna está llena (`sensores_i = 111`)  o que no hay agua en el depósito inferior (`sensores_i = xx0`) que lo lleva al estado de alarma.
+
+2. **Llenado (`llenado`)**: En este estado, la bomba está encendida (`bomba_o = 1`) para llenar el depósito. La alarma permanece desactivada (`alarma_o = 0`). La transición desde este estado ocurre cuando se detecta que la cisterna está llena (`sensores_i = 111`), lo que indica que el depósito ha alcanzado su capacidad máxima  y regresa al estado de Espera o que no hay agua en el depósito inferior (`sensores_i = xx0`) que lo lleva al estado de alarma.
+
+3. **Alarma (`alarma`)**: Este estado se activa cuando se detecta una condición de alarma, como la falta de agua en el depósito inferior . En este estado, la bomba se apaga (`bomba_o = 0`) y se activa la alarma (`alarma_o = 1`). La transición desde este estado ocurre cuando se detecta que el depósito inferior está lleno (`sensores_i = XX1`), lo que indica que se ha resuelto la condición de alarma.
+
+Cada estado y transición está definido en el código Verilog proporcionado, lo que permite controlar el llenado del depósito mediante la activación y desactivación de la bomba en respuesta a las lecturas de los sensores.
+
+
+
+## How to test
+
+bomba1
+
+
+## External hardware
+La asignación de entradas y salidas del diseño del control de la bomba a las entradas y salidas del proyecto Latinpractice son como se indica a continuación.
+
+ck:       Conectado a   uio_in[7].
+rst_i:    Conectado a   uio_in[6].
+sensores_i: Conectado a uio_in[5:3].
+alarma_o: Conectado a uio_out[1].
+bomba_o:  Conectado a uio_out[0].
+
+Como puede notarse, el proyecto de la bomba, para hacer más legible el código, indica cuando un puerto es de entrada colocando un _i al final del nombre del puerto (rst_i) y cuando un puerto es de salida un _o (bomba_o), excepto en el puerto de reloj.
+
+Las entradas de los sensores pueden ser emuladas con botones o con switches conectados a los puertos bidireccionales uio_in[5:3]. Las salidas pueden emularse utilizando LED's conectados a uio_out[0] y uio_out[1] a traveés de una resistencia limitadora de corriente.
+
+## Authors
+
+- [@Arízaga-Silva](https://www.researchgate.net/profile/Juan-Antonio-Arizaga-Silva)
+
+- [@Sanchez-Rincón](https://www.researchgate.net/profile/Ismael_Rincon)
+
+- [@Muñiz-Montero](https://www.researchgate.net/profile/Carlos-Muniz-Montero)
