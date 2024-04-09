@@ -44,9 +44,9 @@ pinout:
   uio[0]: "bomba_o"
   uio[1]: "alarma_o"
   uio[2]: "no used"
-  uio[3]: "sensores_1[0]"
-  uio[4]: "sensores_1[1]"
-  uio[5]: "sensores_1[2]"
+  uio[3]: "sensores_i[0]"
+  uio[4]: "sensores_i[1]"
+  uio[5]: "sensores_i[2]"
   uio[6]: "rst_i"
   uio[7]: "ck"
 
