@@ -39,8 +39,36 @@ Cada estado y transición está definido en el código Verilog proporcionado, lo
 
 
 ## How to test
+En proceso...
+Para probar el circuito en un laboratorio, necesitarías los siguientes materiales:
 
-TODO
+1. **Placa de desarrollo FPGA**: Selecciona una placa de desarrollo FPGA que sea compatible con el Verilog que has escrito y que tenga los pines necesarios para conectar los módulos de entrada y salida.
+
+2. **Cables de conexión**: Necesitarás cables para conectar los pines de entrada y salida de la placa de desarrollo FPGA a tu circuito.
+
+3. **Fuente de alimentación**: Asegúrate de tener una fuente de alimentación adecuada para alimentar tanto la placa de desarrollo FPGA como tu circuito.
+
+4. **Osciloscopio**: Un osciloscopio te ayudará a visualizar las señales de entrada y salida para verificar su correcto funcionamiento.
+
+5. **Sensores simulados**: Si no tienes acceso a sensores físicos, puedes simular las entradas del sensor mediante interruptores o generadores de señales.
+
+6. **Dispositivo de visualización o registro**: Puedes usar LEDs u otro dispositivo de visualización para observar el estado de las salidas de tu circuito.
+
+Aquí tienes un ejemplo de cómo podrías probar el circuito:
+
+1. **Configuración de la placa FPGA**: Conecta tu placa de desarrollo FPGA a tu computadora y carga el diseño Verilog en la placa utilizando el software de desarrollo FPGA correspondiente.
+
+2. **Conexión de cables**: Conecta los cables desde los pines de entrada y salida de la placa de desarrollo FPGA a tu circuito. Asegúrate de seguir el mapeo correcto de los pines.
+
+3. **Configuración del entorno de prueba**: Configura tu entorno de prueba para simular las condiciones deseadas, como niveles de agua simulados en los depósitos y eventos de reinicio.
+
+4. **Ejecución de la prueba**: Aplica los niveles de entrada simulados y observa las salidas correspondientes. Utiliza el osciloscopio si es necesario para verificar las formas de onda de las señales.
+
+5. **Verificación del comportamiento**: Verifica que el circuito funcione según lo esperado en diferentes condiciones de entrada. Prueba casos límite y situaciones de borde para asegurarte de que el diseño sea robusto.
+
+6. **Depuración y ajuste**: Si encuentras algún problema, depura tu diseño utilizando herramientas de depuración como registros de depuración en la FPGA o visualizando las señales con el osciloscopio. Realiza ajustes según sea necesario en tu código Verilog y repite las pruebas.
+
+7. **Documentación de resultados**: Registra tus resultados de prueba, incluidas las condiciones de entrada, las salidas observadas y cualquier problema encontrado durante la prueba. Esto te ayudará en el proceso de depuración y en futuras iteraciones del diseño.
 
 
 ## External hardware
