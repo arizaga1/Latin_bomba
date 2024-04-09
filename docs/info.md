@@ -22,7 +22,18 @@ El circuito consta de una máquina de estados tipo Mealy con tres estados (Esper
 
 Las entradas del circuito corresponden a sensores que detectan la presencia o ausencia de agua. Un sensor para la cisterna (depósito inferior) y dos sensores para el depósito superior. 
 
-EL circuito cuenta con dos salidas, lap rimera para encender y apagar la bomba y la segunda para encender una luz o una alarma que indique qu eno hay agua en el depósito inferior.
+EL circuito cuenta con dos salidas, la primera para encender y apagar la bomba y la segunda para encender una luz o una alarma que indique que no hay agua en el depósito inferior.
+
+El proyecto utiliza un modelo de máquina de estados finitos con tres estados para controlar el llenado del depósito superior mediante una bomba. Los tres estados son:
+
+1. **Espera (`espera`)**: Este estado indica que el sistema está en espera de alguna acción. En este estado, la bomba está apagada (`bomba_o = 0`) y la alarma está desactivada (`alarma_o = 0`). La transición desde este estado ocurre cuando se detecta que el depósito superior está vacío (`sensores_i = 000`) o cuando se detecta que la cisterna está llena (`sensores_i = 111`).
+
+2. **Llenado (`llenado`)**: En este estado, la bomba está encendida (`bomba_o = 1`) para llenar el depósito. La alarma permanece desactivada (`alarma_o = 0`). La transición desde este estado ocurre cuando se detecta que la cisterna está llena (`sensores_i = 111`), lo que indica que el depósito ha alcanzado su capacidad máxima.
+
+3. **Alarma (`alarma`)**: Este estado se activa cuando se detecta una condición de alarma, como la falta de agua en el depósito superior o el desbordamiento de la cisterna. En este estado, la bomba se apaga (`bomba_o = 0`) y se activa la alarma (`alarma_o = 1`). La transición desde este estado ocurre cuando se detecta que el depósito superior está lleno (`sensores_i = 001`), lo que indica que se ha resuelto la condición de alarma.
+
+Cada estado y transición está definido en el código Verilog proporcionado, lo que permite controlar el llenado del depósito mediante la activación y desactivación de la bomba en respuesta a las lecturas de los sensores.
+
 
 
 ## How to test
