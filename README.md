@@ -1,8 +1,8 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
 
-# Tiny Tapeout Verilog Project Template
+# Digital Control State machine   designed for Tiny Tapeout Project  
 
-- [Read the documentation for project](docs/info.md)
+- [Read the documentation for project, in Spanish](docs/info.md)
 
 ## What is Tiny Tapeout?
 
