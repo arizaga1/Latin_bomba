@@ -40,19 +40,22 @@ Cada estado y transición está definido en el código Verilog proporcionado, lo
 
 ## How to test
 En proceso...
+
 Para probar el circuito en un laboratorio, necesitarías los siguientes materiales:
 
-1. **Placa de desarrollo FPGA**: Selecciona una placa de desarrollo FPGA que sea compatible con el Verilog que has escrito y que tenga los pines necesarios para conectar los módulos de entrada y salida.
+1. **Placa de desarrollo TinyTapeout**
 
-2. **Cables de conexión**: Necesitarás cables para conectar los pines de entrada y salida de la placa de desarrollo FPGA a tu circuito.
+2. **Cables de conexión**: Necesitarás cables para conectar los pines de entrada y salida de la placa de desarrollo a tu placa de protoboard.
 
-3. **Fuente de alimentación**: Asegúrate de tener una fuente de alimentación adecuada para alimentar tanto la placa de desarrollo FPGA como tu circuito.
+3. **Fuente de alimentación**: Asegúrate de tener una fuente de alimentación adecuada para alimentar la placa TinyTapeout.
 
 4. **Osciloscopio**: Un osciloscopio te ayudará a visualizar las señales de entrada y salida para verificar su correcto funcionamiento.
 
-5. **Sensores simulados**: Si no tienes acceso a sensores físicos, puedes simular las entradas del sensor mediante interruptores o generadores de señales.
+6. **Generador de Señales**: Si no tienes acceso a sensores físicos, puedes simular las entradas del sensor mediante el generador.
 
-6. **Dispositivo de visualización o registro**: Puedes usar LEDs u otro dispositivo de visualización para observar el estado de las salidas de tu circuito.
+6. **Sensores simulados**: Si no tienes acceso a sensores físicos, puedes simular las entradas del sensor mediante interruptores o generadores de señales.
+
+7. **Dispositivo de visualización o registro**: Puedes usar LEDs, el osciloscopio u otro dispositivo de visualización para observar el estado de las salidas de tu circuito.
 
 Aquí tienes un ejemplo de cómo podrías probar el circuito:
 
