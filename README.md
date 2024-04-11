@@ -59,19 +59,17 @@ Para probar el circuito en un laboratorio, necesitarías los siguientes material
 
 Aquí tienes un ejemplo de cómo podrías probar el circuito:
 
-1. **Configuración de la placa FPGA**: Conecta tu placa de desarrollo FPGA a tu computadora y carga el diseño Verilog en la placa utilizando el software de desarrollo FPGA correspondiente.
+1. **Configuración de la placa FPGA**: Conecta tu placa de desarrollo a la fuente con los voltajes indicados por el fabricante.
 
-2. **Conexión de cables**: Conecta los cables desde los pines de entrada y salida de la placa de desarrollo FPGA a tu circuito. Asegúrate de seguir el mapeo correcto de los pines.
+2. **Conexión de cables**: Conecta los cables desde los pines de entrada y salida de la placa de desarrollo a tu circuito. Asegúrate de seguir el mapeo correcto de los pines.
 
 3. **Configuración del entorno de prueba**: Configura tu entorno de prueba para simular las condiciones deseadas, como niveles de agua simulados en los depósitos y eventos de reinicio.
 
-4. **Ejecución de la prueba**: Aplica los niveles de entrada simulados y observa las salidas correspondientes. Utiliza el osciloscopio si es necesario para verificar las formas de onda de las señales.
+4. **Ejecución de la prueba**: Aplica los niveles de voltaje adecuado a las entradas  y observa las salidas correspondientes. Utiliza el osciloscopio si es necesario para verificar las formas de onda de las señales.
 
 5. **Verificación del comportamiento**: Verifica que el circuito funcione según lo esperado en diferentes condiciones de entrada. Prueba casos límite y situaciones de borde para asegurarte de que el diseño sea robusto.
 
-6. **Depuración y ajuste**: Si encuentras algún problema, depura tu diseño utilizando herramientas de depuración como registros de depuración en la FPGA o visualizando las señales con el osciloscopio. Realiza ajustes según sea necesario en tu código Verilog y repite las pruebas.
-
-7. **Documentación de resultados**: Registra tus resultados de prueba, incluidas las condiciones de entrada, las salidas observadas y cualquier problema encontrado durante la prueba. Esto te ayudará en el proceso de depuración y en futuras iteraciones del diseño.
+6. **Documentación de resultados**: Registra tus resultados de prueba, incluidas las condiciones de entrada, las salidas observadas y cualquier problema encontrado durante la prueba. Esto ayudará en el proceso de depuración y en futuras iteraciones del diseño.
 
 
 ## External hardware
