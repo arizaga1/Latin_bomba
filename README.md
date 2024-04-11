@@ -59,7 +59,7 @@ Para probar el circuito en un laboratorio, necesitarías los siguientes material
 
 Aquí tienes un ejemplo de cómo podrías probar el circuito:
 
-1. **Configuración de la placa FPGA**: Conecta tu placa de desarrollo a la fuente con los voltajes indicados por el fabricante.
+1. **Configuración de la placa TinyTapeout**: Conecta tu placa de desarrollo a la fuente con los voltajes indicados por el fabricante.
 
 2. **Conexión de cables**: Conecta los cables desde los pines de entrada y salida de la placa de desarrollo a tu circuito. Asegúrate de seguir el mapeo correcto de los pines.
 
