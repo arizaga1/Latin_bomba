@@ -16,7 +16,7 @@ To learn more and get started, visit https://tinytapeout.com.
 Este proyecto  forma parte de la iniciativa LATINPRACTICE_2024
 con el cual se pretende que profesores universitarios y alumnos de nivel medio superior y superior, tengan acceso a herramientas de software libre para el diseño de circuitos integrados .
 
-Este proyecto es una máquina de estados sencilla que permite controlar el llenado y vaciado automático de un depósito superior de agua alimentado por una bomba conectada a un depósito inferior de agua.
+Este proyecto es una máquina de estados sencilla, elaborada de forma didáctica, que permite controlar el llenado y vaciado automático de un depósito superior de agua alimentado por una bomba conectada a un depósito inferior de agua.
 
 
 ## How it works
